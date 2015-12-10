@@ -126,7 +126,7 @@ section h2 {font-size:70px;margin:70px 0 50px 0;text-align:center;}
   transform-style: preserve-3d;
   background-color: #EEE;
 }
-.thing:hover .thing-data {transform: rotate3d(0,1,0,-180deg);}
+.thing:hover .thing-data {transform: rotateY(-180deg);} /*rotate3d(0,1,0,-180deg)*/
 
 .thing-data > div {
   position: absolute; display: block;
@@ -137,7 +137,7 @@ section h2 {font-size:70px;margin:70px 0 50px 0;text-align:center;}
 }
 
 .thing-data .thing-data-back {
-  transform: rotate3d(0,1,0,180deg);
+  transform: rotateY(180deg); /*rotate3d(0,1,0,180deg)*/
   color: #FFF; background: #000; padding: 20px;
   box-shadow: 0 0 0 10px rgba(255,255,255,0.3) inset;
 }
@@ -215,7 +215,7 @@ $(function() {
 <figure id="pic" class="thing">
 <div class="thing-data">
   <div class="thing-data-front"><img alt="First Last" src="debayan.jpg"></div>
-  <div class="thing-data-back"><h3>First Last</h3><p>Area and field</p></div>  
+  <div class="thing-data-back"><h3>First Last</h3><p>Country</p></div>  
 </div>
 </figure>
 
