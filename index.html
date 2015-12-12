@@ -180,7 +180,7 @@ $(function() {
   $("#navnav a[href^='#']").on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
-    $('html, body').animate({scrollTop: $(hash).offset().top}, 900, function(){
+    $('html, body').animate({scrollTop: $(hash).offset().top}, 1100, function(){
       window.location.hash = hash;
     });
   });
@@ -203,7 +203,7 @@ $(function() {
   $(document).trigger('resize');
 
   // scroll directly to sections
-  $.scrollify({ section : ".bg" });
+  $.scrollify({ section : ".bg", sectionName : "section-name", scrollSpeed: 1000});
 });
 
   </script>
@@ -229,7 +229,7 @@ $(function() {
 </nav>
 
 <!-- Page index -->
-<div id="index" class="bg">
+<div id="index" class="bg" data-section-name="index_">
 <div id="top-area"></div>
 <section class="container">
 
@@ -249,7 +249,7 @@ $(function() {
 </div>
 
 <!-- Research -->
-<div id="research" class="bg">
+<div id="research" class="bg" data-section-name="research_">
 <section class="container">
 <h2>Research</h2>
 
@@ -262,7 +262,7 @@ $(function() {
 
 
 <!-- Publications -->
-<div id="publications" class="bg">
+<div id="publications" class="bg" data-section-name="publications_">
 <section class="container">
 <h2>Publications</h2>
 
@@ -275,7 +275,7 @@ $(function() {
 
 
 <!-- Personal -->
-<div id="personal" class="bg">
+<div id="personal" class="bg" data-section-name="personal_">
 <section class="container">
 <h2>Personal</h2>
 
